@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <button type="button"><a href="/">Inicio</a></button> 
+    <div class="vertical-center">
+        <div class="main-container">
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form" action="/user/login" method="POST"  class="form">
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="clave">Contraseña</label>
+                    <input type="password" id="clave" name="clave" required>
+                </div>
+                <button type="submit">Iniciar Sesión</button>
+                <% if (locals.errors) { %>
+                    <div class="errores">
+            
+                    <% for(error in errors) { %>
+                        <p>
+                        <%= errors[error].msg %>
+                        </p>
+                        
+                    <% } %>
+                    
+                    </div>
+                <% } %>
+            </form>
+    
+        </div>
+    </div>
+    <script src="/js/login.js"></script>
+</body>
+</html>

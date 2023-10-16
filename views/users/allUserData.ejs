@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <section>
+        <%- include('../partials/header.ejs') %>
+    </section>
+    <section>
+        <div class="main-container">
+            <h1 class="main-title">Lista de Usuarios</h1>
+              <button type="button"><a href="/user/createUser">Crear nuevo usuario</a></button> 
+            <div class="usuarios-container">
+                <% data.forEach(function(user) { %>
+                    <form class="usuario" action="/user/disableUserAndProfileImage/<%=user.userID%>?_method=DELETE"  method="POST" onsubmit="return confirm('¿Desea borrar este usuario <%= user.email %> ?');">
+                        <div class="usuario-imagen usuarios-container-left">
+                            <img src="/img/profile/<%= user.imagen.ubicacion %>" alt="Imagen de perfil" width="300" height="300">
+                        </div>
+                        <div class="usuarios-container-right">
+                            <div class="usuario-informacion">
+                                <p><strong>UserID:</strong> <%= user.userID %></p>
+                                <p><strong>Nombre:</strong> <%= user.nombre %></p>
+                                <p><strong>Apellido:</strong> <%= user.apellido %></p>
+                                <p><strong>Email:</strong> <%= user.email %></p>
+                            </div>
+                            <div class="usuario-botones">
+                                <button type="button"><a href="/user/getEditUserDataById/<%= user.userID %>">Editar</a></button>
+                                <button type="submit">Borrar</button>
+                            </div>
+                        </div>
+                        <input type="hidden" name="userID" value="<%= user.userID %>">
+                    </form>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+    <section>
+        <%- include('../partials/footer.ejs') %>
+    </section>
+</body>
+</html>

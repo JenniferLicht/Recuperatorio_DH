@@ -1,0 +1,49 @@
+<html>
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <section>
+        <%- include('../partials/header') %>
+    </section>
+    <section>
+        <div class="main-container">
+            <h1 class="main-title">Editar perfil</h1>
+            <form id="editForm" enctype="multipart/form-data"  class="form">
+                <% if (usuarioLogeado && usuarioLogeado.esAdmin) { %>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" value="<%= usuario.nombre %>">
+                    <label for ="apellido">Apellido:</label>
+                    <input type="text" name="apellido" value="<%= usuario.apellido %>">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" value="<%= usuario.email %>">
+                <% } else { %>
+                    <li><strong>Nombre:</strong> <%= usuario.nombre %></li>
+                    <br>
+                    <li><strong>Apellido:</strong> <%= usuario.apellido %></li>
+                    <br>
+                    <li><strong>Correo Electrónico:</strong> <%= usuario.email %></li>
+                    <br>
+                    <li><strong>Administrador:</strong> <%= usuario.esAdmin ? 'Sí' : 'No' %></li>
+                <% } %>
+                <input type="hidden" name="imageID" value="<%= usuario.ProfileImage ? usuario.ProfileImage.imageID : '' %>">
+                <input type="hidden" name="ubicacion" value="<%= usuario.ProfileImage ? usuario.ProfileImage.ubicacion : '' %>">
+                <input type="hidden" name="userID" value="<%= usuario.userID %>">
+                <input type="file" name="imagen" id="imagen" accept=".jpg, .jpeg, .png, .gif">
+
+                <div id="mensaje-container" div style="margin-top:10px;" id="mensaje-container"style="display: none;"></div>
+                <% if (usuarioLogeado && usuarioLogeado.userID == usuario.userID) { %>
+                    <button type="button" id="guardarCambiosButton" style="margin-top: 10px;"><a href="/user/changePasswordForm">cambiar contraseña</a></button>
+                <% } %>
+                <button type="button" id="guardarCambiosButton" style="margin-top: 10px;">Guardar Cambios</button>
+            </form>
+            <div id="mensaje-container" style="display: none;"></div>
+
+        </div>
+    </section>
+    <section>
+        <%- include('../partials/footer.ejs') %>
+    </section>
+    <script src="/js/editUser.js"></script>
+</body>
+</html>

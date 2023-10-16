@@ -1,0 +1,82 @@
+[
+    {
+      "id": 1,
+      "nombre": "Emily",
+      "apellido": "Smith",
+      "correoElectronico": "emily.smith@example.com",
+      "clave": "$2a$10$UoO.a7.lHYedkOU9.nSjq.2b9.oBIzbI/qX9R6LsOh6X2tFFMJ2ua",
+      "categoria": "User"
+    },
+    {
+      "id": 2,
+      "nombre": "David",
+      "apellido": "Williams",
+      "correoElectronico": "david.williams@example.com",
+      "clave": "$2a$10$UoO.a7.lHYedkOU9.nSjq.2b9.oBIzbI/qX9R6LsOh6X2tFFMJ2ua",
+      "categoria": "Admin"
+    },
+    {
+      "id": 3,
+      "nombre": "Sarah",
+      "apellido": "Davis",
+      "correoElectronico": "sarah.davis@example.com",
+      "clave": "$2a$10$UoO.a7.lHYedkOU9.nSjq.2b9.oBIzbI/qX9R6LsOh6X2tFFMJ2ua",
+      "categoria": "Admin"
+    },
+    {
+      "id": 4,
+      "nombre": "James",
+      "apellido": "Jones",
+      "correoElectronico": "james.jones@example.com",
+      "clave": "$2a$10$UoO.a7.lHYedkOU9.nSjq.2b9.oBIzbI/qX9R6LsOh6X2tFFMJ2ua",
+      "categoria": "Admin"
+    },
+    {
+      "id": 5,
+      "nombre": "Olivia",
+      "apellido": "Wilson",
+      "correoElectronico": "olivia.wilson@example.com",
+      "clave": "$2a$10$UoO.a7.lHYedkOU9.nSjq.2b9.oBIzbI/qX9R6LsOh6X2tFFMJ2ua",
+      "categoria": "User"
+    },
+    {
+      "id": 6,
+      "nombre": "Michael",
+      "apellido": "Brown",
+      "correoElectronico": "michael.brown@example.com",
+      "clave": "$2a$10$UoO.a7.lHYedkOU9.nSjq.2b9.oBIzbI/qX9R6LsOh6X2tFFMJ2ua",
+      "categoria": "Admin"
+    },
+    {
+      "id": 7,
+      "nombre": "Ava",
+      "apellido": "Martinez",
+      "correoElectronico": "ava.martinez@example.com",
+      "clave": "$2a$10$UoO.a7.lHYedkOU9.nSjq.2b9.oBIzbI/qX9R6LsOh6X2tFFMJ2ua",
+      "categoria": "User"
+    },
+    {
+      "id": 8,
+      "nombre": "Ethan",
+      "apellido": "Johnson",
+      "correoElectronico": "ethan.johnson@example.com",
+      "clave": "$2a$10$UoO.a7.lHYedkOU9.nSjq.2b9.oBIzbI/qX9R6LsOh6X2tFFMJ2ua",
+      "categoria": "User"
+    },
+    {
+      "id": 9,
+      "nombre": "Sophia",
+      "apellido": "Thomas",
+      "correoElectronico": "sophia.thomas@example.com",
+      "clave": "$2a$10$UoO.a7.lHYedkOU9.nSjq.2b9.oBIzbI/qX9R6LsOh6X2tFFMJ2ua",
+      "categoria": "Admin"
+    },
+    {
+      "id": 10,
+      "nombre": "Benjamin",
+      "apellido": "Davis",
+      "correoElectronico": "benjamin.davis@example.com",
+      "clave": "$2a$10$UoO.a7.lHYedkOU9.nSjq.2b9.oBIzbI/qX9R6LsOh6X2tFFMJ2ua",
+      "categoria": "Admin"
+    }
+  ]

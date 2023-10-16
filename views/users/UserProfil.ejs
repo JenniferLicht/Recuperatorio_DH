@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('../partials/head') %>
+</head>
+
+<body>
+    <section>
+        <%- include('../partials/header') %>
+    </section>
+    <section>
+        <div class="main-container">
+            <h1 class="main-title">Perfil de Usuario</h1>
+
+            <img src="<%= usuario.ProfileImage ? '/img/profile/'+ usuario.ProfileImage.ubicacion : '/img/profile/defaultImage.png' %>"
+                alt="Foto de Perfil" width="300" height="300">
+
+
+            <li><strong>Nombre:</strong>
+                <%= usuario.nombre %>
+            </li>
+            <br>
+            <li><strong>Apellido:</strong>
+                <%= usuario.apellido %>
+            </li>
+            <br>
+            <li><strong>Correo Electrónico:</strong>
+                <%= usuario.email %>
+            </li>
+            <br>
+            <li><strong>Administrador:</strong>
+                <%= usuario.esAdmin ? 'Sí' : 'No' %>
+                <% if(usuario.esAdmin){ %> 
+                    <button type="button"> <a class="btn-edit" href="/user/allUserData">Administrar otros usuarios</a> </button>
+                <% } %> 
+
+            </li>
+
+            <div class="usuario-botones">
+                <button type="button"> <a href="/user/getEditUserDataById/<%= usuario.userID %>">Editar Perfil</a> </button> 
+            </div>
+        </div>
+
+    </section>
+    <section>
+        <%- include('../partials/footer.ejs') %>
+    </section>
+</body>
+
+</html>
