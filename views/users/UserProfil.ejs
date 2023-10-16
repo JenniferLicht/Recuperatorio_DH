@@ -31,13 +31,12 @@
             <br>
             <li><strong>Administrador:</strong>
                 <%= usuario.esAdmin ? 'Sí' : 'No' %>
-                <% if(usuario.esAdmin){ %> 
-                    <button type="button"> <a class="btn-edit" href="/user/allUserData">Administrar otros usuarios</a> </button>
-                <% } %> 
-
             </li>
 
             <div class="usuario-botones">
+                <% if(usuario.esAdmin){ %> 
+                    <button type="button"> <a class="btn-edit" href="/user/allUserData">Administrar otros usuarios</a> </button>
+                <% } %>
                 <button type="button"> <a href="/user/getEditUserDataById/<%= usuario.userID %>">Editar Perfil</a> </button> 
             </div>
         </div>

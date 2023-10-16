@@ -80,8 +80,7 @@ input {
     padding: 20px;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .usuarios-container-left {
@@ -94,6 +93,10 @@ input {
     justify-content: right;
 }
 
+.usuarios-container-right .usuario-informacion, .usuarios-container-right .usuario-botones {
+    display: flex;
+    flex-direction: column;
+}
 .usuario-informacion {
     margin-top: 20px;
 }
@@ -103,7 +106,7 @@ input {
     justify-content: right;
 }
 
-.main-container .usuarios-container .usuario-botones {
+.main-container .usuarios-container .usuario-botones, .main-container .usuario-botones {
     display: flex;
     justify-content: center;
 }

@@ -30,12 +30,13 @@
                 <input type="hidden" name="ubicacion" value="<%= usuario.ProfileImage ? usuario.ProfileImage.ubicacion : '' %>">
                 <input type="hidden" name="userID" value="<%= usuario.userID %>">
                 <input type="file" name="imagen" id="imagen" accept=".jpg, .jpeg, .png, .gif">
-
                 <div id="mensaje-container" div style="margin-top:10px;" id="mensaje-container"style="display: none;"></div>
-                <% if (usuarioLogeado && usuarioLogeado.userID == usuario.userID) { %>
-                    <button type="button" id="guardarCambiosButton" style="margin-top: 10px;"><a href="/user/changePasswordForm">cambiar contraseña</a></button>
-                <% } %>
-                <button type="button" id="guardarCambiosButton" style="margin-top: 10px;">Guardar Cambios</button>
+                <div class="usuario-botones">
+                    <% if (usuarioLogeado && usuarioLogeado.userID == usuario.userID) { %>
+                        <button type="button" id="guardarCambiosButton" style="margin-top: 10px;"><a href="/user/changePasswordForm">cambiar contraseña</a></button>
+                    <% } %>
+                    <button type="button" id="guardarCambiosButton" style="margin-top: 10px;">Guardar Cambios</button>
+            </div>
             </form>
             <div id="mensaje-container" style="display: none;"></div>
 
